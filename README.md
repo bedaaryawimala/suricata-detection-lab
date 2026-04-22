@@ -8,7 +8,7 @@ Suricata is used as a network IDS in ubuntu live server for monitoring a traffic
     - Brute force
     - Web probing
     - Flood
-# Langkah - Langkah Setup Suricata
+# Suricata Setup Guide
 - install suricata
   using: sudo apt install -y suricata suricata-update
 - edit suricata configuration
@@ -27,3 +27,15 @@ Suricata is used as a network IDS in ubuntu live server for monitoring a traffic
 - run suricata service
 - check alert event only by using :
   grep -a '"event_type":"alert"' /var/log/suricata/eve.json | tail -20
+
+# Topology
+Ubuntu live server
+  - Elasticsearch
+  - Kibana
+  - Fleet Server
+  - Elastic Agent
+  - Suricata IDS
+  - Nginx for web probing target
+
+Kali Linux
+  - Elastic Agent
